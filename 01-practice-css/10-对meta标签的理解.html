@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    你都知道什么meta标签？用处都是什么？
+
+    meta标签用来描述网页文档的属性，比如网页的作者，网页描述，关键词等;
+    meta标签的作用有：搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现网页转换时的动态效果，
+    控制页面缓冲，网页定级评价，控制网页显示的窗口等！ 
+    <!-- 注意：meta用来表示的元数据不能由 <base>、<link>, <script>、<style>或 <title>表示的元素 -->
+    meta标签的组成：meta标签共有两个属性，它们分别是http-equiv属性和name属性 和content一起使用
+    name属性主要用于描述网页
+    http-equiv顾名思义，相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容
+    
+
+    常用的meta标签：
+    （1）charset，用来描述HTML文档的编码类型
+    <!-- <meta charset="UTF-8" > -->
+    (2) keywords，页面关键词
+    <!-- <meta name="keywords" content="关键词" /> -->
+    (3)description，页面描述：
+    <!-- <meta name="description" content="页面描述内容" /> -->
+    (4)refresh，页面重定向和刷新：
+    <!-- <meta http-equiv="refresh" content="0;url=" /> -->
+    (5) viewport，适配移动端，可以控制视口的大小和比例：
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+    (6) auther 标注网页的作者 
+    <!-- <meta name="author"content="root,root@xxxx.com">  -->
+    <!-- (7) Set-Cookie(cookie设定) 如果网页过期，那么存盘的cookie将被删除。 不能再html页面中使用  -->
+    <!-- <meta http-equiv="Set-Cookie"content="cookievalue=xxx;expires=Friday,12-Jan-200118:18:18GMT；path=/">  -->
+    (7) 类型和编码 主页制作所使用的文字以及语言
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=gb_2312-80">
+    <meta http-equiv="Content-Language" content="zh-CN"> -->
+    (8) 对浏览器进行兼容
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+
+    
+
+
+</body>
+
+</html>

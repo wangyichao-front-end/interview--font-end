@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="left">两栏布局：(1)左盒子float:left 右盒子margin-left(2)利用flex布局</div>
+    <div class="right"></div>
+   
+    <style>
+         * {
+            padding: 0;
+            margin:0;
+         }
+         body {
+            display: flex;
+         }
+        .left {
+            /* float: left; */
+            height: 100vh;
+            width: 500px;
+            background-color: blue;
+        }
+       
+        .right {
+            /* margin-left: 500px; */
+            flex: 1; 
+            /* flex = 1 是对剩余空间来分 按倍数去分配容器的宽度 0.5就是0.5份*/
+            height: 100vh;
+            background-color: aqua;
+        }
+        
+    </style>
+</body>
+</html>

@@ -7,14 +7,52 @@
     <title>Document</title>
 </head>
 <style>
-    .arrow {
-            border-top: 10px solid #000;
-            border-right: 10px solid transparent;
-            display: inline-block;
-          }
+     * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .son {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin-top: 50px;
+    }
+
+    .father {
+        /* overflow: auto; */
+        /* display: flex; */
+        /* border: 0.5px solid black; */
+        /* padding: 1px; */
+        /* float: left; */
+        display: flow-root;
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+        margin-top: 100px;
+    }
+
+    .b {
+        display: flow-root;
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+        margin-bottom: 20px;
+    }
+    .tianjia {
+        /* display: flow-root; */
+        /* display: flex; */
+        overflow: auto;
+    }
+    .r {
+        width: 500px;
+        height: 500px;
+        background-color:chartreuse;
+        margin-top: 100px;
+    }
 </style>
 <body>
-    BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，
+    <!-- BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，
     指一个独立的渲染区域或者说是一个隔离的独立容器。
 
     形成 BFC 的条件:
@@ -29,7 +67,17 @@
         3.BFC 的区域不会与 float 的元素区域重叠。
         4.计算 BFC 的高度时，浮动元素也参与计算
         5.BFC 就是页面上的一个独立容器，容器里面的子元素不会影响外面元素。
-        
-          <span class="arrow"></span>
+    
+    经典解决问题：1、外边距塌陷(父子之间) 2、兄弟元素之间边距塌陷（给兄弟元素之间添加BFC元素） 3、高度塌陷 -->
+
+    <div class="b"></div>
+    <div class="tianjia">兄弟元素之间边距塌陷</div>
+    <div class="r"></div>
+
+
+    <div class="father">
+        <div class="son">外边距塌陷</div>
+    </div>
+    
 </body>
 </html>

@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    路由模式：
     hash模式和history模式的区别
     
     1.最直观的区别是在url中hash带了一个很丑的#而history是没有的
 
-    2.hash虽然出现在url中，但不会包括在http请求中，故改变hash不会重新加载页面
+    2.hash虽然出现在url中，但不会包括在http请求中，故改变hash不会重新加载页面，是 美化后的hash模式，
 
     3.history应用了html5中新增的pushState()和replaceState()方法，它提供了对历史记录进行修改的功能，
       但执行修改时，虽然改变了当前的url，但浏览器不会立即向后端发生请求
