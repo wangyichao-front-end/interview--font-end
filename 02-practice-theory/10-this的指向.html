@@ -27,7 +27,9 @@
         sss(); //window 独立函数调用，没有和对象相关联
         person.sayName(); //person
         (person.sayName)(); //person
-        (b = person.sayName)(); //window
+        (b = person.sayName)(); //window 
+        //(b = person.sayName)的结果是一个值，并没有和person对象有联系，所以后面加一个（）进行调用的时候，
+        //还是属于默认绑定（直接调用），this指向全局对象
       }
       sayName();
       console.log('---------------------------------');
@@ -56,14 +58,15 @@
       person1.foo1(); //person1
       person1.foo1.call(person2); //person2
 
-      person1.foo2(); //window
-      person1.foo2.call(person2); //window
+      person1.foo2(); //window     
+      person1.foo2.call(person2); //window (箭头函数通过call、apply、bind调用是不会绑定this)
 
       person1.foo3()(); //window 返回的函数是在全局作用域下的
       person1.foo3.call(person2)(); //window 拿到foo3函数绑定person2，但返回的函数仍是在全局作用域下的
       person1.foo3().call(person2); //person2 拿到foo3函数的返回函数再绑定person2
 
-      person1.foo4()(); //person1 会往上级作用域找
+      person1.foo4()(); //person1  person1.foo4()这句话得到return后的函数为箭头函数进行调用，
+      //箭头函数中没有this向上一层作用域找，上层作用域为foo4,this指向person1
       person1.foo4.call(person2)(); //person2 箭头函数只看上级作用域
       person1.foo4().call(person2); //person1 箭头函数只看上级作用域
       console.log('---------------------------------');
@@ -163,7 +166,7 @@
           }
       }
       var o = new o();
-      var print = o.print;
+      var print = o.print; //未执行，返回的只是一个函数
       print();  //undefined
 
       var n = {x:2,print:print};
